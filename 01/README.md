@@ -7,7 +7,7 @@ straight into the console to https://adventofcode.com/2022/day/1/input :)
 Naïve solution, but alas
 
 ```javascript
-document.body.textContent.split("\n\n").map(e=>e.split("\n").reduce((d,b)=>d- -b)).sort((a,b)=>b-a)[0]
+Math.max(...document.body.textContent.split("\n\n").map(e=>e.split("\n").reduce((d,b)=>d- -b)))
 ```
 
 </details>
@@ -15,7 +15,7 @@ document.body.textContent.split("\n\n").map(e=>e.split("\n").reduce((d,b)=>d- -b
 
 <details><summary>Part 2</summary>
 
-Builds on part 1
+Sorting and slicing instead of `Math.max`, otherwise the same.
 
 ```javascript
 eval(document.body.textContent.split("\n\n").map(e=>e.split("\n").reduce((d,b)=>d- -b)).sort((a,b)=>b-a).slice(0,3).join`+`) 
