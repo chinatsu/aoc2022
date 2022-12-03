@@ -1,1 +1,1 @@
-l=[[ord(i)-(38if i.isupper()else 96)for i in l]for l in open('data/input').readlines()];print(sum(max(set(b[:(s:=len(b)//2)]).intersection(b[s:]))for b in l),sum(max(set(c[0]).intersection(c[1]).intersection(c[2]))for c in[l[s:min(s+3,len(l))]for s in range(0,len(l),3)]),sep="\n")
+l=[[ord(i)-(38if i.isupper()else 96)for i in l]for l in open('data/input').readlines()];print(sum(max(set(b[:(s:=len(b)//2)])&set(b[s:]))for b in l),sum(max(set(c[0])&set(c[1])&set(c[2]))for c in[l[s:min(s+3,len(l))]for s in range(0,len(l),3)]),sep="\n")
